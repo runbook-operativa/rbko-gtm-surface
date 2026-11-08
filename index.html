@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Lote de hoy</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand">Runbook Operativa</div>
+  <h1 id="title">Lote de hoy</h1>
+  <div id="week" class="week" hidden></div>
+</header>
+
+<section id="login" class="panel" hidden>
+  <p>Acceso solo para <b>miguel@runbook.es</b>. Te enviamos un enlace al correo.</p>
+  <button id="send-link" class="primary">Enviar enlace de acceso</button>
+  <p id="login-msg" class="muted"></p>
+</section>
+
+<nav id="tabs" class="tabs" hidden>
+  <button data-tab="lote" class="on">Lote</button>
+  <button data-tab="pendientes">Pendientes</button>
+</nav>
+
+<main id="lote"></main>
+<main id="pendientes" hidden></main>
+
+<footer class="foot"><span id="who"></span> <button id="logout" class="link" hidden>Salir</button></footer>
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
